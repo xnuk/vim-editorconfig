@@ -19,8 +19,6 @@ let g:editorconfig_blacklist = get(g:, 'editorconfig_blacklist', {})
 
 augroup plugin-editorconfig
   autocmd!
-  " autocmd VimEnter * nested
-  "       \ if !argc() | call editorconfig#load() | endif
   autocmd BufNewFile,BufReadPost * nested  call editorconfig#load()
 augroup END
 
